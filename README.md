@@ -18,3 +18,7 @@ touch .gitignore
 .idea
 node_modules
 ```
+
+## 注册与登录功能的实现
+- 添加注册与登录路由
+- 增加session功能

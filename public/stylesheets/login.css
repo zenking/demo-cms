@@ -1,0 +1,98 @@
+*{margin: 0;padding: 0;font-family: "Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,tahoma,arial,Verdana,sans-serif,"WenQuanYi Micro Hei","\5B8B\4F53";font-size: 12px}
+ul,li{list-style: none}
+img,input{border: none;outline: none}
+a{text-decoration: none;color: #333}
+.clear:after{content: "";clear: both;display: block;height: 0;visibility: hidden;font-size: 0;}
+.w1238{margin: 0 auto;width: 1238px}
+.header{background: #ecebeb;height: 40px;}
+.header .topLeft,.header .topLeft li{float: left;border-bottom: 2px solid transparent;margin-right: 4px}
+.header .topLeft li.active{background-color: #f4e4e2;border-bottom: 2px solid #f4523b;}
+.header .topLeft li.active
+.header .topLeft li a .iconPic{width: 16px;height: 16px;display: inline-block;background-repeat: no-repeat;background-position:center;}
+.header .topLeft li a .iconPic_nav_pic{background: url("../images/iconpic-pic.png");background-size: 100% auto;}
+.header .topLeft li.active a{color: #f4523b;}
+.header .topLeft li a{padding: 0 20px;height: 38px;line-height: 38px;margin-right: 4px}
+.foot-wrap{
+
+    background-color: #373f48;
+
+    margin-top:80px;
+
+}
+
+.row-content h3{
+
+     color:#DDD;
+
+     font-size:16px;
+
+     font-weight: 300;
+
+     line-height: 16px;
+
+     margin:40px 0 30px 34px;
+
+ }
+
+.row-content ul {
+
+    font-size: 13px;
+
+    line-height: 24px;
+}
+.row-content li {
+
+    list-style: none;
+}
+.row-content a {
+
+    color: #878B91;
+}
+.row-content a:hover{
+
+     text-decoration:none;
+
+     color:#c1ba62;
+
+ }
+
+.row-content ul.social {
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    text-align: center;
+}
+.row-content ul.social li {
+
+    display: inline-block;
+}
+.row-content ul.social {
+
+    display: inline-block;
+
+    font-size: 18px;
+
+    line-height: 30px;
+
+. square(30 px);
+
+    border-radius: 36px;
+
+    background-color: lightgray;
+
+    color: #fff;
+
+    margin: 0 3px 3px 0;
+}
+.row-content ul.social:hover {
+
+    text-decoration: none;
+
+    background-color: lawngreen;
+
+}
+

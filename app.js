@@ -4,15 +4,22 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
+var MongoStore = require('connect-mongo')(session);
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var users = require('./routes/users/users');
+var video = require('./routes/video/video');
+var travel = require('./routes/travel/travel');
+var photo = require('./routes/photo/photo');
+var category = require('./routes/category/category');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'html');
+app.engine('html',require('ejs').__express);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -21,9 +28,25 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+//设置会话中间件
+app.use(session({
+  resave:true,
+  saveUninitialized:true,
+  secret:'cms',
+  store:new MongoStore({
+    url:'mongodb://localhost/cms'
+  })
+}));
+app.use(function (req,res,next) {
+  res.locals.user = req.session.user;
+  next();
+});
 app.use('/', routes);
 app.use('/users', users);
+app.use('/video',video);
+app.use('/travel',travel);
+app.use('/photo',photo);
+app.use('/category',category);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
