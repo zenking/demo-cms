@@ -11,6 +11,7 @@ router.get('/reg', function (req, res, next) {
 });
 router.post('/reg', function (req, res, next) {
     var user = req.body;
+    console.log(user);
     if(user.repassword != user.password){
         res.redirect('back')
     }else{
