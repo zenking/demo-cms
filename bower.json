@@ -1,0 +1,21 @@
+{
+  "name": "demo-cms",
+  "description": "",
+  "main": "",
+  "authors": [
+    "zhangxinghua0337 <757776819@qq.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/zhangxinghua0337/demo-cms",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
