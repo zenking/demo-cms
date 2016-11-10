@@ -11,7 +11,6 @@ router.get('/reg', function (req, res, next) {
 });
 router.post('/reg', function (req, res, next) {
     var user = req.body;
-    console.log(user);
     if(user.repassword != user.password){
         res.redirect('back')
     }else{
@@ -39,6 +38,10 @@ router.post('/login',function (req,res,next) {
         console.error(err);
         res.redirect('back');
     })
+});
+router.get('/logout',function (req,res) {
+    req.session.user = null;
+    res.redirect('/');
 });
 router.get('/share/:id',function (req,res) {
 
