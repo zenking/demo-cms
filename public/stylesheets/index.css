@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style: none;
+}
+.bannerBox{
+    width: 1349px;
+    position: relative;
+    /*overflow: hidden;*/
+}
+.bannerList{
+    position: relative;
+    /*width:6745px;*/
+    width:5396px;
+    /*overflow: hidden;*/
+    top:0;
+    left: 0;
+}
+.bannerList li{
+    float: left;
+    width: 1349px;
+    height: 460px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bannerList li .wp{
+    width: 1226px;
+    height: 460px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    /*background: red;*/
+}
+.bannerList li .wp .bannerDown{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    color: #333;
+    z-index: 1;
+    cursor: pointer;
+}
+.bannerBox .bannerTips{
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    top: 430px;
+    /*background: red;*/
+    z-index: 10;
+    text-align: center;
+}
+.bannerBox .bannerTips li{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,.4);
+    cursor: pointer;
+    margin-right: 10px;
+}
+.bannerBox .bannerTips li.on{
+    background-color: #ff4a39;
+}
